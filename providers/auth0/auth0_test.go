@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/daubit/goth"
+	"github.com/daubit/goth/providers/auth0"
 	"github.com/jarcoal/httpmock"
-	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/auth0"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -1,8 +1,8 @@
 package gitea_test
 
 import (
-	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/gitea"
+	"github.com/daubit/goth"
+	"github.com/daubit/goth/providers/gitea"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

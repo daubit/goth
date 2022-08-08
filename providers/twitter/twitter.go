@@ -11,7 +11,7 @@ import (
 
 	"fmt"
 
-	"github.com/markbates/goth"
+	"github.com/daubit/goth"
 	"github.com/mrjones/oauth"
 	"golang.org/x/oauth2"
 )
@@ -157,12 +157,12 @@ func newConsumer(provider *Provider, authURL string) *oauth.Consumer {
 	return c
 }
 
-//RefreshToken refresh token is not provided by twitter
+// RefreshToken refresh token is not provided by twitter
 func (p *Provider) RefreshToken(refreshToken string) (*oauth2.Token, error) {
 	return nil, errors.New("Refresh token is not provided by twitter")
 }
 
-//RefreshTokenAvailable refresh token is not provided by twitter
+// RefreshTokenAvailable refresh token is not provided by twitter
 func (p *Provider) RefreshTokenAvailable() bool {
 	return false
 }

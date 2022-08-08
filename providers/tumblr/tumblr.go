@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/markbates/goth"
+	"github.com/daubit/goth"
 	"github.com/mrjones/oauth"
 	"golang.org/x/oauth2"
 )

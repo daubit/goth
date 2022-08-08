@@ -1,8 +1,8 @@
 package mastodon_test
 
 import (
-	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/mastodon"
+	"github.com/daubit/goth"
+	"github.com/daubit/goth/providers/mastodon"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

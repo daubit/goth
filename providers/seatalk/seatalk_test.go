@@ -1,8 +1,8 @@
 package seatalk_test
 
 import (
-	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/seatalk"
+	"github.com/daubit/goth"
+	"github.com/daubit/goth/providers/seatalk"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

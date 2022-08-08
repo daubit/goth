@@ -14,7 +14,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/markbates/goth"
+	"github.com/daubit/goth"
 	"golang.org/x/oauth2"
 )
 
@@ -170,12 +170,12 @@ func userFromReader(reader io.Reader, user *goth.User) error {
 	return err
 }
 
-//RefreshToken refresh token is not provided by influxcloud
+// RefreshToken refresh token is not provided by influxcloud
 func (p *Provider) RefreshToken(refreshToken string) (*oauth2.Token, error) {
 	return nil, errors.New("Refresh token is not provided by influxcloud")
 }
 
-//RefreshTokenAvailable refresh token is not provided by influxcloud
+// RefreshTokenAvailable refresh token is not provided by influxcloud
 func (p *Provider) RefreshTokenAvailable() bool {
 	return false
 }

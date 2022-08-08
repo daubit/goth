@@ -10,8 +10,8 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/daubit/goth"
 	"github.com/markbates/going/defaults"
-	"github.com/markbates/goth"
 	"golang.org/x/oauth2"
 )
 
@@ -117,7 +117,7 @@ func (p *Provider) RefreshTokenAvailable() bool {
 	return false
 }
 
-//RefreshToken get new access token based on the refresh token
+// RefreshToken get new access token based on the refresh token
 func (p *Provider) RefreshToken(refreshToken string) (*oauth2.Token, error) {
 	if refreshToken == "" {
 		return nil, fmt.Errorf("No refresh token provided")

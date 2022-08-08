@@ -16,7 +16,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/markbates/goth"
+	"github.com/daubit/goth"
 	"golang.org/x/oauth2"
 )
 
@@ -103,7 +103,7 @@ func (p *Provider) FetchUser(session goth.Session) (goth.User, error) {
 	}
 
 	// always add appsecretProof to make calls more protected
-	// https://github.com/markbates/goth/issues/96
+	// https://github.com/daubit/goth/issues/96
 	// https://developers.facebook.com/docs/graph-api/securing-requests
 	hash := hmac.New(sha256.New, []byte(p.Secret))
 	hash.Write([]byte(sess.AccessToken))
@@ -205,12 +205,12 @@ func newConfig(provider *Provider, scopes []string) *oauth2.Config {
 	return c
 }
 
-//RefreshToken refresh token is not provided by facebook
+// RefreshToken refresh token is not provided by facebook
 func (p *Provider) RefreshToken(refreshToken string) (*oauth2.Token, error) {
 	return nil, errors.New("Refresh token is not provided by facebook")
 }
 
-//RefreshTokenAvailable refresh token is not provided by facebook
+// RefreshTokenAvailable refresh token is not provided by facebook
 func (p *Provider) RefreshTokenAvailable() bool {
 	return false
 }

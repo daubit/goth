@@ -1,8 +1,8 @@
 package heroku_test
 
 import (
-	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/heroku"
+	"github.com/daubit/goth"
+	"github.com/daubit/goth/providers/heroku"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

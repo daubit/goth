@@ -13,7 +13,7 @@ import (
 	"net/url"
 	"sort"
 
-	"github.com/markbates/goth"
+	"github.com/daubit/goth"
 	"golang.org/x/oauth2"
 )
 
@@ -219,12 +219,12 @@ func signRequest(secret string, params map[string]string) string {
 	return hex.EncodeToString(hasher.Sum(nil))
 }
 
-//RefreshToken refresh token is not provided by lastfm
+// RefreshToken refresh token is not provided by lastfm
 func (p *Provider) RefreshToken(refreshToken string) (*oauth2.Token, error) {
 	return nil, errors.New("Refresh token is not provided by lastfm")
 }
 
-//RefreshTokenAvailable refresh token is not provided by lastfm
+// RefreshTokenAvailable refresh token is not provided by lastfm
 func (p *Provider) RefreshTokenAvailable() bool {
 	return false
 }
